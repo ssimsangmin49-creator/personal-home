@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Name — Personal Website</title>
+<meta name="description" content="Personal website of an independent professional with a background in capital markets and corporate transactions, and an interest in open environmental technology research.">
+<style>
+  :root {
+    --bg: #fdfbf6;
+    --bg-alt: #f6f2e9;
+    --text: #2b2b2b;
+    --muted: #666259;
+    --accent: #4f6f5a;
+    --line: #e5dfd0;
+    --max: 44rem;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.7;
+    font-size: 1.05rem;
+  }
+  h1, h2, h3, nav, .eyebrow, .btn {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  a { color: var(--accent); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  header {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(253, 251, 246, .95);
+    border-bottom: 1px solid var(--line);
+  }
+  .bar {
+    max-width: 60rem; margin: 0 auto; padding: .8rem 1.25rem;
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  }
+  .brand { font-weight: 600; text-decoration: none; color: var(--text); font-family: inherit; }
+  nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 1.25rem; }
+  nav a { text-decoration: none; color: var(--muted); font-size: .92rem; }
+  nav a:hover, nav a.active { color: var(--accent); }
+  .menu-btn {
+    display: none; background: none; border: 1px solid var(--line);
+    border-radius: 4px; padding: .35rem .7rem; font: inherit; font-size: .9rem; color: var(--text); cursor: pointer;
+  }
+  section { padding: 4.5rem 1.25rem; }
+  section:nth-of-type(even) { background: var(--bg-alt); }
+  .wrap { max-width: var(--max); margin: 0 auto; }
+  h1 { font-size: clamp(2rem, 5vw, 2.8rem); line-height: 1.2; margin: .3rem 0 1rem; font-weight: 600; }
+  h2 { font-size: 1.6rem; margin: 0 0 1rem; font-weight: 600; }
+  h3 { font-size: 1.05rem; margin: 1.5rem 0 .25rem; }
+  .eyebrow { color: var(--accent); text-transform: uppercase; letter-spacing: .12em; font-size: .78rem; margin: 0; }
+  .hero { padding-top: 5rem; }
+  .hero-grid { display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; }
+  .photo {
+    width: 140px; height: 140px; border-radius: 50%;
+    background: var(--line); border: 1px solid var(--line);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--muted); font-size: .8rem; text-align: center; flex-shrink: 0;
+  }
+  .btn {
+    display: inline-block; padding: .6rem 1.2rem; border: 1px solid var(--accent);
+    border-radius: 4px; text-decoration: none; color: var(--accent); font-size: .92rem;
+  }
+  .btn:hover { background: var(--accent); color: #fff; }
+  .note { color: var(--muted); font-size: .95rem; border-left: 3px solid var(--line); padding-left: 1rem; }
+  .placeholder { color: var(--muted); font-style: italic; }
+  ul.plain { padding-left: 1.2rem; }
+  footer { padding: 2rem 1.25rem; text-align: center; color: var(--muted); font-size: .88rem; border-top: 1px solid var(--line); }
+  @media (max-width: 640px) {
+    .menu-btn { display: block; }
+    nav ul {
+      display: none; position: absolute; left: 0; right: 0; top: 100%;
+      flex-direction: column; gap: 0; background: var(--bg); border-bottom: 1px solid var(--line);
+    }
+    nav ul.open { display: flex; }
+    nav li a { display: block; padding: .8rem 1.25rem; }
+    section { padding: 3rem 1.25rem; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <a class="brand" href="#home">Your Name</a>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav aria-label="Main">
+      <ul id="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#background">Background</a></li>
+        <li><a href="#interests">Interests</a></li>
+        <li><a href="#notes">Notes</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section id="home" class="hero">
+    <div class="wrap hero-grid">
+      <div class="photo" role="img" aria-label="Placeholder for a personal photo">Photo<br>placeholder</div>
+      <div style="flex:1; min-width:16rem">
+        <p class="eyebrow">Welcome</p>
+        <h1>Hello, I’m [Your Name].</h1>
+        <p>I’m an independent professional with a background in capital markets and corporate transactions. These days I also spend time on open, non-commercial environmental technology research. This site is a quiet place to share who I am and what I’m thinking about.</p>
+        <p><a class="btn" href="#contact">Get in touch</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <h2>About Me</h2>
+      <p class="placeholder">[Placeholder: a few sentences about yourself — where you are based, how you came to your work, and what matters to you.]</p>
+      <h3>Interests</h3>
+      <p class="placeholder">[Placeholder: personal interests and pursuits outside of work.]</p>
+      <h3>Philosophy</h3>
+      <p class="placeholder">[Placeholder: a short statement of the principles you try to work and live by.]</p>
+    </div>
+  </section>
+
+  <section id="background">
+    <div class="wrap">
+      <h2>Professional Background</h2>
+      <p>My professional experience is in the following areas of capital markets and corporate transactions:</p>
+      <ul class="plain">
+        <li>Capital Markets</li>
+        <li>Mergers &amp; Acquisitions (M&amp;A)</li>
+        <li>Initial Public Offerings (IPOs)</li>
+        <li>Tender Offers</li>
+      </ul>
+      <p class="placeholder">[Placeholder: add a short description of your role and experience in each area, only as you are comfortable sharing it.]</p>
+    </div>
+  </section>
+
+  <section id="interests">
+    <div class="wrap">
+      <h2>Current Interests</h2>
+      <p>I am interested in independent research and environmental technology, and I take part in open, non-commercial work through <strong>AZAD Research Group (AZADrg)</strong>.</p>
+      <p class="placeholder">[Placeholder: describe in your own words what draws you to this work.]</p>
+      <p class="note">This is my personal website. Views and notes here are my own and do not represent AZADrg. Official technical publications are released separately by AZADrg. <span class="placeholder">[Add a link to the AZADrg site here.]</span></p>
+    </div>
+  </section>
+
+  <section id="notes">
+    <div class="wrap">
+      <h2>Thoughts &amp; Notes</h2>
+      <p>A space for personal essays and reflections. Nothing has been posted yet.</p>
+      <p class="placeholder">[Placeholder: add entries here as you write them, e.g. a title, a date, and a short summary linking to the full note.]</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <p>The best way to reach me is through LinkedIn.</p>
+      <p><a class="btn" href="https://www.linkedin.com/in/your-profile/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+      <p class="placeholder">Optional email: [your-email@example.com]</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© <span id="year">2026</span> [Your Name]. Personal website, separate from AZADrg.</p>
+</footer>
+
+<script>
+  (function () {
+    var btn = document.getElementById('menu-btn');
+    var menu = document.getElementById('menu');
+    btn.addEventListener('click', function () {
+      var open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+    });
+    menu.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') {
+        menu.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    var links = document.querySelectorAll('#menu a');
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) {
+            links.forEach(function (a) {
+              a.classList.toggle('active', a.getAttribute('href') === '#' + en.target.id);
+            });
+          }
+        });
+      }, { rootMargin: '-40% 0px -55% 0px' });
+      document.querySelectorAll('main section').forEach(function (s) { io.observe(s); });
+    }
+  })();
+</script>
+</body>
+</html>
