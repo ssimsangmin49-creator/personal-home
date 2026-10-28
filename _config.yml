@@ -1,0 +1,43 @@
+
+# ==========================================
+# Sang Min Shim — Personal Home
+# GitHub Pages / Jekyll Configuration
+# ==========================================
+
+# Site identity
+title: "Sang Min Shim"
+description: >-
+  Personal thoughts, experiences, and stories
+  on capital markets, environmental challenges,
+  and life along the way.
+
+author: "Sang Min Shim"
+lang: "en"
+
+# GitHub Pages
+url: "https://ssimsangmin49-creator.github.io"
+baseurl: "/personal-home"
+
+# Jekyll
+markdown: kramdown
+highlighter: rouge
+
+# Permalinks
+permalink: /blog/:year/:month/:day/:title/
+
+# Default settings for blog posts
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Sang Min Shim"
+
+# Exclude local development files
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
