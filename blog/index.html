@@ -73,8 +73,51 @@
     </section>
     <section id="notes" aria-labelledby="notes-heading">
       <div class="section-top"><h2 id="notes-heading">Latest Notes</h2><span class="small">The journal begins here</span></div>
-      <!-- When you publish your first note, replace the empty message below with an article link. -->
-      <div class="empty"><h3>Every story begins somewhere.</h3><p>There are no published notes yet. This space will grow gradually, one thought and one story at a time.</p></div>
+     
+{% if site.posts.size > 0 %}
+
+  {% for post in site.posts %}
+
+  <article class="note-item">
+    <div class="note-meta">
+      {{ post.date | date: "%B %d, %Y" }}
+      {% if post.categories.size > 0 %}
+        · {{ post.categories | join: ", " }}
+      {% endif %}
+    </div>
+
+    <h3>
+      <a href="{{ post.url | relative_url }}">
+        {{ post.title }}
+      </a>
+    </h3>
+
+    {% if post.description %}
+      <p>{{ post.description }}</p>
+    {% else %}
+      <p>{{ post.excerpt | strip_html | truncatewords: 35 }}</p>
+    {% endif %}
+
+    <a class="read-more" href="{{ post.url | relative_url }}">
+      Read Note →
+    </a>
+  </article>
+
+  {% endfor %}
+
+{% else %}
+
+  <div class="empty">
+    <h3>Every story begins somewhere.</h3>
+    <p>
+      There are no published notes yet.
+      This space will grow gradually,
+      one thought and one story at a time.
+    </p>
+  </div>
+
+{% endif %}
+
     </section>
     <div class="closing">“A place to think, to remember, and occasionally to share.”</div>
   </main>
