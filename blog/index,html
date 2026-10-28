@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Personal thoughts, experiences, and stories from Sang Min Shim." />
+  <title>Thoughts & Notes — Sang Min Shim</title>
+  <style>
+    :root { --paper:#faf9f5; --cream:#f3f0e8; --ink:#252b30; --muted:#686961; --line:#dedbd2; --accent:#496b60; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:Georgia,'Times New Roman',serif; line-height:1.75; }
+    a { color:inherit; }
+    .wrap { width:min(100% - 48px, 1040px); margin-inline:auto; }
+    header { background:rgba(250,249,245,.97); border-bottom:1px solid var(--line); }
+    .nav { min-height:76px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { font-size:1.24rem; font-weight:bold; text-decoration:none; white-space:nowrap; }
+    .nav-links { display:flex; gap:25px; flex-wrap:wrap; }
+    .nav-links a { text-decoration:none; color:var(--muted); font-size:.96rem; }
+    .nav-links a:hover, a:hover { color:var(--accent); }
+    .hero { padding:85px 0 76px; background:var(--cream); border-bottom:1px solid var(--line); }
+    .eyebrow { font-family:Arial,sans-serif; font-size:.72rem; letter-spacing:.18em; text-transform:uppercase; color:var(--accent); font-weight:bold; }
+    h1 { font-size:clamp(2.5rem,6vw,4.4rem); line-height:1.13; font-weight:normal; margin:18px 0 20px; }
+    .intro { max-width:690px; color:#555a56; font-size:1.2rem; margin:0; }
+    main { padding:66px 0 100px; }
+    .section-top { display:flex; align-items:baseline; justify-content:space-between; gap:20px; border-bottom:1px solid var(--line); padding-bottom:15px; }
+    h2 { font-size:1.6rem; font-weight:normal; margin:0; }
+    .small { color:var(--muted); font-size:.9rem; }
+    .categories { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin:27px 0 65px; }
+    .category { border:1px solid var(--line); background:#fffefa; padding:27px 24px; min-height:190px; }
+    .category h3 { font-weight:normal; font-size:1.25rem; margin:10px 0; }
+    .category p { color:var(--muted); font-size:.95rem; margin:0; }
+    .category .number { font-family:Arial,sans-serif; font-size:.75rem; color:var(--accent); }
+    .empty { padding:60px 25px; text-align:center; border-bottom:1px solid var(--line); }
+    .empty h3 { font-size:1.45rem; font-weight:normal; margin:0 0 10px; }
+    .empty p { color:var(--muted); max-width:520px; margin:0 auto; }
+    .closing { margin-top:75px; padding:35px 0; border-top:1px solid var(--line); font-style:italic; color:var(--muted); }
+    footer { border-top:1px solid var(--line); padding:25px 0 38px; color:var(--muted); font-size:.9rem; }
+    .footer-row { display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+    .footer-row a { text-decoration:none; }
+    @media (max-width:700px) { .wrap { width:min(100% - 32px,1040px); } .nav { align-items:flex-start; flex-direction:column; padding:17px 0; gap:7px; } .nav-links { gap:18px; } .hero { padding:58px 0; } .categories { grid-template-columns:1fr; } main { padding-top:48px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="../index.html">Sang Min Shim</a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="#categories">Categories</a>
+        <a href="#notes">Notes</a>
+      </nav>
+    </div>
+  </header>
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow">A personal journal</div>
+      <h1>Thoughts &amp; Notes</h1>
+      <p class="intro">A collection of personal thoughts, experiences, and stories gathered along the way. Some are about work and the world around us. Others are simply about life.</p>
+    </div>
+  </section>
+  <main class="wrap">
+    <section id="categories" aria-labelledby="categories-heading">
+      <div class="section-top"><h2 id="categories-heading">Areas of Interest</h2><span class="small">Three perspectives, one journey</span></div>
+      <div class="categories">
+        <article class="category"><span class="number">01 / MARKETS</span><h3>Capital Markets</h3><p>Perspectives shaped by experience in regulation, supervision, and the primary market.</p></article>
+        <article class="category"><span class="number">02 / ENVIRONMENT</span><h3>Environment</h3><p>Notes on open environmental technologies, local action, and the challenges that remain.</p></article>
+        <article class="category"><span class="number">03 / PERSONAL</span><h3>Life &amp; Reflections</h3><p>Travel, people, curiosity, and the small moments worth remembering.</p></article>
+      </div>
+    </section>
+    <section id="notes" aria-labelledby="notes-heading">
+      <div class="section-top"><h2 id="notes-heading">Latest Notes</h2><span class="small">The journal begins here</span></div>
+      <!-- When you publish your first note, replace the empty message below with an article link. -->
+      <div class="empty"><h3>Every story begins somewhere.</h3><p>There are no published notes yet. This space will grow gradually, one thought and one story at a time.</p></div>
+    </section>
+    <div class="closing">“A place to think, to remember, and occasionally to share.”</div>
+  </main>
+  <footer><div class="wrap footer-row"><span>© <span id="year">2026</span> Sang Min Shim</span><a href="../index.html">← Back to Personal Home</a></div></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
