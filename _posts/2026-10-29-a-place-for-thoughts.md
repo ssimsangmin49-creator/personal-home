@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "A Place for Thoughts and Stories"
@@ -8,6 +7,7 @@ tags: [thoughts, reflections, life]
 author: Sang Min Shim
 description: "A personal space for thoughts and stories."
 ---
+
 
 For many years, my professional life revolved around
 capital markets, regulation, and the practical
