@@ -16,7 +16,7 @@ lang: "en"
 
 # GitHub Pages
 url: "https://ssimsangmin49-creator.github.io"
-baseurl: "/personal-home"
+baseurl: "/sangmin-shim"
 
 # Jekyll
 markdown: kramdown
