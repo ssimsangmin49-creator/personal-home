@@ -217,65 +217,83 @@ main {
       <p class="intro">A collection of personal thoughts, experiences, and stories gathered along the way. Some are about work and the world around us. Others are simply about life.</p>
     </div>
   </section>
-  <main class="wrap">
-    <section id="categories" aria-labelledby="categories-heading">
-      <div class="section-top"><h2 id="categories-heading">Areas of Interest</h2><span class="small">Three perspectives, one journey</span></div>
-      <div class="categories">
-        <article class="category"><span class="number">01 / MARKETS</span><h3>Capital Markets</h3><p>Perspectives shaped by experience in regulation, supervision, and the primary market.</p></article>
-        <article class="category"><span class="number">02 / ENVIRONMENT</span><h3>Environment</h3><p>Notes on open environmental technologies, local action, and the challenges that remain.</p></article>
-        <article class="category"><span class="number">03 / PERSONAL</span><h3>Life &amp; Reflections</h3><p>Travel, people, curiosity, and the small moments worth remembering.</p></article>
+  
+<main class="wrap">
+
+  {% if site.posts.size > 0 %}
+
+    {% assign latest = site.posts.first %}
+
+    <article class="featured-post" id="notes">
+
+      <div class="note-meta">
+        {{ latest.date | date: "%B %d, %Y" }}
+        {% if latest.categories.size > 0 %}
+          · {{ latest.categories | join: ", " }}
+        {% endif %}
       </div>
+
+      <h2>{{ latest.title }}</h2>
+
+      <div class="post-content">
+        {{ latest.content }}
+      </div>
+
+    </article>
+
+    {% if site.posts.size > 1 %}
+
+    <section class="previous-notes">
+      <h2>Previous Notes</h2>
+
+      <ul>
+        {% for post in site.posts offset:1 %}
+        <li>
+          <span class="small">
+            {{ post.date | date: "%B %d, %Y" }}
+          </span>
+          <a href="{{ post.url | relative_url }}">
+            {{ post.title }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+
     </section>
-    <section id="notes" aria-labelledby="notes-heading">
-      <div class="section-top"><h2 id="notes-heading">Latest Notes</h2><span class="small">The journal begins here</span></div>
-     
-{% if site.posts.size > 0 %}
 
-  {% for post in site.posts %}
-
-  <article class="note-item">
-    <div class="note-meta">
-      {{ post.date | date: "%B %d, %Y" }}
-      {% if post.categories.size > 0 %}
-        · {{ post.categories | join: ", " }}
-      {% endif %}
-    </div>
-
-    <h3>
-      <a href="{{ post.url | relative_url }}">
-        {{ post.title }}
-      </a>
-    </h3>
-
-    {% if post.description %}
-      <p>{{ post.description }}</p>
-    {% else %}
-      <p>{{ post.excerpt | strip_html | truncatewords: 35 }}</p>
     {% endif %}
 
-    <a class="read-more" href="{{ post.url | relative_url }}">
-      Read Note →
-    </a>
-  </article>
+  {% else %}
 
-  {% endfor %}
+    <div class="empty">
+      <h3>Every story begins somewhere.</h3>
+      <p>
+        There are no published notes yet.
+        This space will grow gradually,
+        one thought and one story at a time.
+      </p>
+    </div>
 
-{% else %}
+  {% endif %}
 
-  <div class="empty">
-    <h3>Every story begins somewhere.</h3>
-    <p>
-      There are no published notes yet.
-      This space will grow gradually,
-      one thought and one story at a time.
-    </p>
+  <section class="interests" id="categories">
+    <h2>Areas of Interest</h2>
+
+    <div class="interest-links">
+      <span>Capital Markets</span>
+      <span>·</span>
+      <span>Environment</span>
+      <span>·</span>
+      <span>Life &amp; Reflections</span>
+    </div>
+  </section>
+
+  <div class="closing">
+    “A place to think, to remember, and occasionally to share.”
   </div>
 
-{% endif %}
+</main>
 
-    </section>
-    <div class="closing">“A place to think, to remember, and occasionally to share.”</div>
-  </main>
   <footer><div class="wrap footer-row"><span>© <span id="year">2026</span> Sang Min Shim. Personal website, separate from AZADrg </span><a href="../index.html">← Back to Personal Home</a></div></footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
