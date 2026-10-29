@@ -174,14 +174,87 @@ I belong to no particular religion, nor do I subscribe to any single philosophic
     </div>
   </section>
 
-  <section id="notes">
-    <div class="wrap">
-      <h2>Thoughts &amp; Notes</h2>
-      <p>A collection of personal thoughts, experiences, and stories gathered along the way.</p>
-      <a href="blog/index.html">Explore My Journal →</a>
+  
+<section id="notes">
+  <div class="wrap">
+    <h2>Thoughts &amp; Notes</h2>
+    <p>A collection of personal thoughts, experiences, and stories gathered along the way.</p>
 
-    </div>
-  </section>
+    <ul id="recent-posts" class="recent-posts">
+      <li>Loading recent posts...</li>
+    </ul>
+
+    <a href="blog/index.html">Explore My Journal →</a>
+  </div>
+</section>
+
+<style>
+  .recent-posts {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0;
+  }
+  .recent-posts li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(128,128,128,0.25);
+  }
+  .recent-posts a {
+    text-decoration: none;
+  }
+  .recent-posts a:hover {
+    text-decoration: underline;
+  }
+</style>
+
+<script>
+  async function loadRecentPosts() {
+    const list = document.getElementById("recent-posts");
+
+    try {
+      const response = await fetch("blog/feed.xml");
+      if (!response.ok) throw new Error("Feed unavailable");
+
+      const xml = new DOMParser().parseFromString(
+        await response.text(), "application/xml"
+      );
+
+      const entries = [...xml.getElementsByTagNameNS(
+        "http://www.w3.org/2005/Atom", "entry"
+      )].slice(0, 5);
+
+      list.replaceChildren();
+
+      for (const entry of entries) {
+        const title = entry.getElementsByTagNameNS(
+          "http://www.w3.org/2005/Atom", "title"
+        )[0]?.textContent;
+
+        const link = entry.getElementsByTagNameNS(
+          "http://www.w3.org/2005/Atom", "link"
+        )[0]?.getAttribute("href");
+
+        if (!title || !link) continue;
+
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.textContent = title;
+        a.href = link;
+        li.appendChild(a);
+        list.appendChild(li);
+      }
+
+      if (!list.children.length) {
+        list.textContent = "No posts available yet.";
+      }
+    } catch (error) {
+      list.textContent = "Recent posts are temporarily unavailable.";
+      console.error(error);
+    }
+  }
+
+  loadRecentPosts();
+</script>
+
 
   <section id="contact">
     <div class="wrap">
