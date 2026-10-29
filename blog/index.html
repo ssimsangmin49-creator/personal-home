@@ -21,7 +21,119 @@
     .nav-links { display:flex; gap:25px; flex-wrap:wrap; }
     .nav-links a { text-decoration:none; color:var(--muted); font-size:.96rem; }
     .nav-links a:hover, a:hover { color:var(--accent); }
-    .hero { padding:85px 0 76px; background:var(--cream); border-bottom:1px solid var(--line); }
+    .hero {
+  padding: 32px 0 30px;
+  background: var(--cream);
+  border-bottom: 1px solid var(--line);
+}
+
+h1 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  line-height: 1.2;
+  font-weight: normal;
+  margin: 10px 0;
+}
+
+.intro {
+  max-width: 690px;
+  color: #555a56;
+  font-size: 1rem;
+  margin: 0;
+}
+
+main {
+  padding: 38px 0 75px;
+}
+
+/* Full Post */
+
+.featured-post {
+  max-width: 800px;
+  padding: 30px 0 45px;
+  border-bottom: 1px solid var(--line);
+}
+
+.featured-post h2 {
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  line-height: 1.3;
+  margin: 12px 0 24px;
+}
+
+.post-content {
+  font-size: 1.1rem;
+  line-height: 1.95;
+  overflow-wrap: break-word;
+}
+
+.post-content p {
+  margin: 0 0 1.5em;
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.post-content a {
+  color: var(--accent);
+}
+
+/* Previous Notes */
+
+.previous-notes {
+  max-width: 800px;
+  margin-top: 42px;
+}
+
+.previous-notes h2 {
+  font-size: 1.35rem;
+  margin-bottom: 15px;
+}
+
+.previous-notes ul {
+  list-style: none;
+  padding: 0;
+}
+
+.previous-notes li {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.previous-notes a {
+  text-decoration: none;
+}
+
+/* Compact Categories */
+
+.interests {
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.interests h2 {
+  font-size: 1.15rem;
+  margin-bottom: 12px;
+}
+
+.interest-links {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+.interest-links a {
+  text-decoration: none;
+}
+
+@media (max-width:700px) {
+  .hero { padding: 28px 0; }
+  main { padding-top: 28px; }
+  .post-content { font-size: 1.02rem; }
+}
     .eyebrow { font-family:Arial,sans-serif; font-size:.72rem; letter-spacing:.18em; text-transform:uppercase; color:var(--accent); font-weight:bold; }
     h1 { font-size:clamp(2.5rem,6vw,4.4rem); line-height:1.13; font-weight:normal; margin:18px 0 20px; }
     .intro { max-width:690px; color:#555a56; font-size:1.2rem; margin:0; }
