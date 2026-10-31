@@ -40,5 +40,5 @@ This has become a rather long piece, and I have ventured into subjects that some
 <img src="{{ '/images/webcam.png' | relative_url }}"
      alt="Closing image"
      style="display:block; width:100%; height:auto;">
-<figcaption align="center">Preparing a webcam for the AFC-500 shoot—much like traveling, the preparation itself is part of the joy.</figcaption>
+<figcaption align="center" style="font-size: 0.8em;">Preparing a webcam for the AFC-500 shoot—much like traveling, the preparation itself is part of the joy.</figcaption>
 </figure>
