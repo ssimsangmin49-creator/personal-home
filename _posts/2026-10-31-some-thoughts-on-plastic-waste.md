@@ -40,6 +40,6 @@ This has become a rather long piece, and I have ventured into subjects that some
      alt="Closing image"
      style="display:block; width:100%; height:auto;">
 
-     <p style="text-align:center; font-size:13px; color:#888; margin-top:8px; font-style:italic;">
+<p style="text-align:center; font-size:13px; color:#888; margin-top:8px; font-style:italic;">
   Preparing a webcam for the AFC-500 shoot—much like traveling, the preparation itself is part of the joy.
 </p>
