@@ -35,3 +35,7 @@ This has become a rather long piece, and I have ventured into subjects that some
 *Or you'll miss all that heavenly glory!*
 
 — As quoted in *Chloe & Theo* (2015), originally spoken by Bruce Lee.
+
+<img src="{{ '/images/파일명.png' | relative_url }}"
+     alt="Closing image"
+     style="display:block; width:100%; height:auto;">
