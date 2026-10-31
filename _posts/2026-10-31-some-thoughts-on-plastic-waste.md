@@ -27,14 +27,11 @@ This has become a rather long piece, and I have ventured into subjects that some
 ---
 
 *Don't think. FEEL.*
-
 *It's like a finger pointing at the moon.*
-
 *Don't concentrate on the finger.*
-
 *Or you'll miss all that heavenly glory!*
 
-— As quoted in *Chloe & Theo* (2015), originally spoken by Bruce Lee.
+<sub>— As quoted in *Chloe & Theo* (2015), originally spoken by Bruce Lee.</sub>
 
 <figure>
 <img src="{{ '/images/webcam1.png' | relative_url }}"
