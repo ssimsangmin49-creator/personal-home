@@ -37,7 +37,7 @@ This has become a rather long piece, and I have ventured into subjects that some
 — As quoted in *Chloe & Theo* (2015), originally spoken by Bruce Lee.
 
 <figure>
-<img src="{{ '/images/webcam.png' | relative_url }}"
+<img src="{{ '/images/webcam1.png' | relative_url }}"
      alt="Closing image"
      style="display:block; width:120%; height:auto;">
 <figcaption align="center" style="font-size: 0.8em;">Preparing a webcam for the AFC-500 shoot—much like traveling, the preparation itself is part of the joy.</figcaption>
